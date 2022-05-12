@@ -14,6 +14,6 @@ def serve_layout():
 #funcion principal
 app.layout = serve_layout
 
-if _name_ == '__main__':
+if __name__ == '__main__':
   #Cargar el objeto principal a todas las interfaces de red en el puerto 80
   app.run_server(host='0.0.0.0',port=80)
