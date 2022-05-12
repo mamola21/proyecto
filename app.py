@@ -1,16 +1,18 @@
-from dash import Dash, html, dcc
-import pandas as pd
+#Se llaman las librerias
+from dash import Dash, html, dcc #Esta es la libreria para el servidor web del data science
+import pandas as pd              #Esta libreria es para procesar los datos
 import plotly.graph_objs as go
 
-# Declarar objetos principales
+#Declarar objetos principales
 app = Dash(__name__)
 
-# Cargar la base de datos
+
+#Cargar la base de datos
 def serve_layout():
   df = pd.read_excel('portalwiki.xlsx')
   return html.Div([html.H1(df['Titulo']),
                        html.Div(df['Tema1']),
-                       html.Div(df['Tema2'])])                
+                       html.Div(df['Tema2'])])
 #funcion principal
 app.layout = serve_layout
 
