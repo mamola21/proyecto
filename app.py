@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.graph_objs as go
 
 # Declarar objetos principales
-app = Dash(_name_)
+app = Dash(__name__)
 
 # Cargar la base de datos
 def serve_layout():
@@ -14,6 +14,6 @@ def serve_layout():
 #funcion principal
 app.layout = serve_layout
 
-if _name_ == '_main_':
+if _name_ == '__main__':
   #Cargar el objeto principal a todas las interfaces de red en el puerto 80
   app.run_server(host='0.0.0.0',port=80)
