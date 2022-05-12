@@ -1,3 +1,4 @@
+from flask import Flask
 from dash import Dash, html, dcc 
 import plotly.graph objs as go
 import pandas as pd
